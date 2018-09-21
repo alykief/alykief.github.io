@@ -13,13 +13,13 @@ Aspiring Web Developer in the Greater Philadelphia Area. Career background of We
 
 ### Education
 
-General Assembly
+_General Assembly_
 Web Development Immersive Remote Course 
 2018
 
-Wilmington University
+_Wilmington University_
 Associates in Liberal Arts
 2018
 
-Saint Mark's High School
+_Saint Mark's High School_
 2011
