@@ -11,19 +11,26 @@ var id, color, level = 0;
 
 //Start button listener - generate comp sequence, listen for user sequence and level up
 $(document).ready(function(){
-  $('.level').text('0');
+  //Display 00 on level to start
+  $('.level').text('00');
+  //Initiate click
   $('.start').on('click', ()=>{
+    //Level up
     level = 0;
     level++;
     compSeq = [];
     userSeq =  [];
-  compSequence();
+  //Initiate computer patter (as function below)
+    compSequence();
   })
 
+  //Color pad click
   $('.button').on('click', ()=>{
-    id = $(this).attr('id');
-    pad = $(this).attr('class').split(' ')[1];
-  userSequence();
+    id = $(event.currentTarget).attr('id');
+    //Initiate flash
+    color = $(event.currentTarget).attr('class').split()[1];
+  //Initiate user click listener
+    userSequence();
   })
 });
 
@@ -35,26 +42,29 @@ function userSequence(){
     error = true;
     displayError();
     userSeq = [];
-    computerSequence();
+    compSequence();
     //Check sequence
   } else if (userSeq.length === compSeq.length && userSeq.length < level){
     level++;
     userSeq = [];
     error = false;
     console.log('Start game')
-    computerSequence();
+    //Initiate computer pattern
+    compSequence();
   }
 }
 
-//Check win state
+//Check if win
 if (userSeq.length === level){
-  displayWinner();
+  displayWin();
 }
 
 //Comp generated sequence
-function computerSequence(){
+function compSequence(){
   console.log(level);
+  //Display level
   $('.level').text('level');
+  //If no error, display initate random number generator for pattern
   if(!error){
     randomNum();
   }
@@ -62,52 +72,61 @@ function computerSequence(){
     randomNum();
   }
   var i = 0;
-  var myInt = setInt(function(){
+  var myInt = setInterval(function(){
     id = compSeq[i];
     color = $('#' + id).attr('class');
-    color = color.split(' ')[1];
+    color = color.split()[1];
     console.log(id + ' ' + color);
     i++;
     if (i == compSeq.length){
-      clearInt(myInt);
+      clearInterval(myInt);
     }
   }, 1000);
 }
 
 //Generate random number
 function randomNum(){
+  //Get random number for pattern
   var random = Math.floor(Math.random() * 4);
+  //Push to compSeq array
   compSeq.push(random);
 }
 
 //Class for flash
 function addClass(id, color){
+  //Change class to -active for color change
   $('#' + id).addClass(color + '-active');
   setTimeout(function(){
+    //Change back timed for flash appearance
     $('#' + id).removeClass(color + '-active');
   }, 500);
 }
 
 //User vs. computerSequence for win state
 function checkUserSeq(){
+  //Compare pattern pushed into arrays
   for (var i = 0; i < userSeq.length; i++){
     if (userSeq[i] != compSeq[i]){
+      //If not equivalent, return false
       return false;
+    } else if (userSeq[i] == compSeq[i]){
+      return true;
     }
   }
-  return true;
 }
 
 //Error
 function displayError() {
+  //console.log error message
   console.log('Error!');
   var counter = 0;
-  var myError = setInt(function(){
+  var myError = setInterval(function(){
+    //Display on screen
     $('.level').text('Err');
     counter++;
     if (counter == 3){
       $('.level').text(level);
-      clearInt(myError);
+      clearInterval(myError);
         userSeq = [];
         counter = 0;
     }
@@ -117,11 +136,13 @@ function displayError() {
 //Win state display
 function displayWin(){
   var count = 0;
-  var winInt = setInt(function(){
+  var winInt = setInterval(function(){
     count++;
+    //Display win on screen
     $('.level').text('Win');
     if (count == 5){
-      clearInt(winInt);
+      clearserval(winInt);
+      //To restart game and clear out progress
       $('.level').text('00');
         count = 0;
     }
