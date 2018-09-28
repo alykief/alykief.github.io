@@ -50,7 +50,6 @@ $(() => {
       checkUserSeq();
       if (checkUserSeq()===false){
         level++;
-        alert('Keep playing');
         compSequence();
       } else if (checkUserSeq()===true){
         alert('Try again');
@@ -66,7 +65,7 @@ $(() => {
   }
 }
 
-  // Error - lost round state 
+  // Error
   function displayError() {
     //console.log error message
     console.log('Error!');
@@ -97,8 +96,10 @@ $(() => {
       color = $('#' + id).attr('class').split(" ")[1];
       console.log(id + ' ' + color);
       i++;
-      setTimeout (()=>{
-        addClass(id, color)}, 1200);
+      const classTiming = ()=>{
+        addClass(id, color)
+      }
+      setTimeout (classTiming, 400 * i);
     }
 };
 
@@ -119,7 +120,7 @@ function addClass(id, color) {
   setTimeout(()=>{
     //Change back timed for flash appearance
     $('#' + id).removeClass(color + '-active');
-  }, 1200);
+  }, 400);
 }
 
 //User vs. computerSequence for win state
