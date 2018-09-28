@@ -20,7 +20,7 @@ $(() => {
       level++;
       compSeq = [];
       userSeq = [];
-      //Initiate computer patter (as function below)
+      //Initiate computer pattern (as function below)
       compSequence();
     })
 
@@ -28,7 +28,7 @@ $(() => {
     $('.button').on('click', () => {
       id = $(event.currentTarget).attr('id');
       //Initiate flash
-      color = $(event.currentTarget).attr('class').split(' ')[1];
+      color = $(event.currentTarget).attr('class').split(" ")[1];
       addClass(id, color);
       //Initiate user click listener
       userSequence();
@@ -40,44 +40,49 @@ $(() => {
     $(event.target).on('click', () => {
       id = $(event.currentTarget).attr('id');
       //Initiate flash
-      color = $(event.currentTarget).attr('class').split(' ')[1];
+      color = $(event.currentTarget).attr('class').split(" ")[1];
       addClass(id, color);
     })
     userSeq.push(id);
     console.log(id + " " + color);
-    if (!checkUserSeq()) {
-      error = true;
-      displayError();
-      userSeq = [];
-      compSequence();
-      //Check sequence
-    } else if (userSeq.length === compSeq.length && userSeq.length < level) {
+    console.log(userSeq);
+    console.log(compSeq);
+    console.log(level);
+    console.log(userSeq.length === compSeq.length && userSeq.length < level);
+    //If statement to compare inputs
+    if (userSeq.length === compSeq.length) {
       level++;
       userSeq = [];
       error = false;
-      console.log('Start game')
+      console.log('Keep playing')
       //Initiate computer pattern
       compSequence();
-    }
+    } else if (checkUserSeq()) {
+      error = true;
+      displayError();
+      userSeq = [];
+      //Initiate computer pattern
+      compSequence();
   }
 
   //Check if win
   if (userSeq.length === level) {
     displayWin();
   }
+}
 
   // Error message
   function displayError() {
     //console.log error message
     console.log('Error!');
     var counter = 0;
-    var myError = setInterval(function() {
+    var error = setInterval(function() {
       //Display on screen
       $('.level').text('Err');
       counter++;
       if (counter == 3) {
         $('.level').text(level);
-        clearInterval(myError);
+        clearInterval(error);
         userSeq = [];
         counter = 0;
       }
@@ -89,31 +94,27 @@ $(() => {
     console.log(level);
     //Display level
     $('.level').text(level);
-    //If no error, display initate random number generator for pattern
+    //Initate random number generator for pattern
     randomNum();
-    addClass();
 
     for (let i = 0; i < compSeq.length; i++) {
       id = compSeq[i];
-      color = $('#' + id).attr('class');
-      color = color.split(' ')[1];
+      color = $('#' + id).attr('class').split(" ")[1];
       console.log(id + ' ' + color);
       i++;
-      $logNumber = ()=>{
-        console.log(i);
-      };
-      setTimeout($logNumber, 1000);
-    };
-
-    userSequence();
+      setTimeout (()=>{
+        addClass(id, color)}, 1000);
+    }
 };
 
 //Generate random number
 function randomNum() {
   //Get random number for pattern
-  var random = Math.floor(Math.random() * 4);
-  //Push to compSeq array
-  compSeq.push(random);
+  for (let i = 0; i < level; i++){
+    var random = Math.floor(Math.random() * 4);
+    //Push to compSeq array
+    compSeq.push(random);
+  }
 }
 
 //Class for flash
@@ -130,11 +131,13 @@ function addClass(id, color) {
 function checkUserSeq() {
   //Compare pattern pushed into arrays
   for (var i = 0; i < userSeq.length; i++) {
-    if (userSeq[i] != compSeq[i]) {
+    if (userSeq[i] !== compSeq[i]) {
       //If not equivalent, return false
       return false;
-    } else if (userSeq[i] == compSeq[i]) {
+      console.log('Loss');
+    } else if (userSeq[i] === compSeq[i]) {
       return true;
+      console.log('Win');
     }
   }
 }
