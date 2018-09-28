@@ -1,0 +1,20 @@
+<!-- ###Explanations of Technology
+Seemingly simple game concept strung together with a basis of HTML, styled by CSS and functionality with Javascript/jQuery.
+
+###Approach
+Began with Psuedocode on paper and a drawing of the end goal of the "board". Began by creating all files, setting up basic templates, and then filled in HTML first. I knew that my buttons would need to have an ID and a Class of color in order to be called throughout code later on, so I created them with this in mind. I allowed my control panel to be within a separate Div for styling purposes.
+
+After all HTML was input, I moved to CSS for styling which proved to be more challenging than originally expected. I utilized Flex within the control panel, input custom fonts and worked with the radius of the Div in order to create the rounded edges and circular shapes.
+
+Javascript proved to be my biggest challenge. I decided to make my buttons "flash" by setting a class change on a timeout function to switch from a color, to white and back to a color by simply adding and removing an additional class. I knew that I wanted my computer to generate a pattern of flashes, and for the user to imitate that pattern by clicking the buttons. I set up empty arrays for these to be logged into. I then compared the arrays to each other, and if equal, user will level up and be faced with another, longer computer generated sequence to copy. If they do not match the computer's sequence, they do not level up and are faced with another pattern of the same length.
+
+The win state occurs when the user has successfully ran through all levels.
+
+###Link
+file:///Users/alyssackieffer/Desktop/Portfolio/alykief.github.io/Unit_1/index.html
+
+###Installation
+No installation required?
+
+###Unsolved
+As of 12AM on Friday I am still struggling with the timing of the flashes and have found that after Level 3, the pattern becomes hard to follow and if the same color is generated twice in a row, you can not discern between the two flashes. I have a win state, but have lost my "error" (lose state) along the way. I also wanted to add in sound bites for each click, but have struggled so much along the way that I didn't feel comfortable adding the sound in when I have other bugs to be worked out.  -->
