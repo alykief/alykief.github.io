@@ -48,9 +48,14 @@ $(() => {
 
     if (userSeq.length === compSeq.length){
       checkUserSeq();
-      alert('Keep playing');
-      level++;
-      compSequence();
+      if (checkUserSeq()===false){
+        level++;
+        alert('Keep playing');
+        compSequence();
+      } else if (checkUserSeq()===true){
+        alert('Try again');
+        compSequence();
+      }
     }
 
   //Win state
@@ -61,7 +66,7 @@ $(() => {
   }
 }
 
-  // Error message
+  // Error - lost round state 
   function displayError() {
     //console.log error message
     console.log('Error!');
