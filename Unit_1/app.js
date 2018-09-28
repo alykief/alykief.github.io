@@ -5,7 +5,7 @@ $(() => {
   userSeq = [];
   compSeq = [];
 
-  const levels = 20;
+  const levels = 10;
 
   var id, color, level = 0;
 
@@ -45,29 +45,19 @@ $(() => {
     })
     userSeq.push(id);
     console.log(id + " " + color);
-    console.log(userSeq);
-    console.log(compSeq);
-    console.log(level);
-    console.log(userSeq.length === compSeq.length && userSeq.length < level);
-    //If statement to compare inputs
-    if (userSeq.length === compSeq.length) {
-      level++;
-      userSeq = [];
-      error = false;
-      console.log('Keep playing')
-      //Initiate computer pattern
-      compSequence();
-    } else if (checkUserSeq()) {
-      error = true;
-      displayError();
-      userSeq = [];
-      //Initiate computer pattern
-      compSequence();
-  }
 
-  //Check if win
-  if (userSeq.length === level) {
-    displayWin();
+    if (userSeq.length === compSeq.length){
+      checkUserSeq();
+      alert('Keep playing');
+      level++;
+      compSequence();
+    }
+
+  //Win state
+  if (userSeq.length === levels) {
+    // displayWin();
+    alert('You are a winner!');
+    $('.level').text('Win');
   }
 }
 
@@ -103,7 +93,7 @@ $(() => {
       console.log(id + ' ' + color);
       i++;
       setTimeout (()=>{
-        addClass(id, color)}, 1000);
+        addClass(id, color)}, 1200);
     }
 };
 
@@ -121,10 +111,10 @@ function randomNum() {
 function addClass(id, color) {
   //Change class to -active for color change
   $('#' + id).addClass(color + '-active');
-  setTimeout(function() {
+  setTimeout(()=>{
     //Change back timed for flash appearance
     $('#' + id).removeClass(color + '-active');
-  }, 500);
+  }, 1200);
 }
 
 //User vs. computerSequence for win state
@@ -135,27 +125,12 @@ function checkUserSeq() {
       //If not equivalent, return false
       return false;
       console.log('Loss');
+      displayError();
     } else if (userSeq[i] === compSeq[i]) {
       return true;
       console.log('Win');
     }
   }
-}
-
-//Win state display
-function displayWin() {
-  var count = 0;
-  var winInt = setInterval(function() {
-    count++;
-    //Display win on screen
-    $('.level').text('Win');
-    if (count == 5) {
-      clearInterval(winInt);
-      //To restart game and clear out progress
-      $('.level').text('00');
-      count = 0;
-    }
-  }, 500);
 }
 
 //End of code
