@@ -96,10 +96,8 @@ $(() => {
       color = $('#' + id).attr('class').split(" ")[1];
       console.log(id + ' ' + color);
       i++;
-      const classTiming = ()=>{
-        addClass(id, color)
-      }
-      setTimeout (classTiming, 400 * i);
+      setTimeout (()=>{
+        addClass(id, color)}, 400);
     }
 };
 
