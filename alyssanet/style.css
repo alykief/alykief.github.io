@@ -1,0 +1,156 @@
+html {
+  background-color: #dfd9e2;
+}
+
+header img {
+  width: 70vw;
+  height: auto;
+  margin-left: 15vw;
+}
+
+nav {
+  family-family: 'Century Gothic', sans-serif;
+  text-align: center;
+  background-color: #c3acce;
+  padding: .5vw;
+}
+
+nav a:link {
+  color: #538083;
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: #88909f;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #dfd9e2;
+  background-color: #538083;
+  text-decoration: none;
+}
+
+nav a:active {
+  color: #88909f;
+  text-decoration: none;
+}
+
+div img {
+  width: 60vw;
+  height: auto;
+  margin-top: 2vw;
+}
+
+p {
+  font-family: sans-serif;
+  font-size: 2vw;
+  family-family: 'Century Gothic', sans-serif;
+  color: #538083;
+  text-align: left;
+  margin-left: 6vw;
+  width: 65vw;
+}
+
+p a:link {
+  color: #c3acce;
+  text-decoration: none;
+}
+
+p a:visited {
+  color: #88909f;
+  text-decoration: none;
+}
+
+p a:hover {
+  color: #dfd9e2;
+  background-color: #538083;
+  text-decoration: none;
+}
+
+p a:active {
+  color: #c3acce;
+  text-decoration: none;
+}
+
+footer {
+  family-family: 'Century Gothic', sans-serif;
+  text-align: center;
+  background-color: #c3acce;
+  padding: .5vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  color: #89909f;
+}
+
+footer a:link {
+  color: #538083;
+  text-decoration: none;
+}
+
+footer a:visited {
+  color: #88909f;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #dfd9e2;
+  background-color: #538083;
+  text-decoration: none;
+}
+
+footer a:active {
+  color: #88909f;
+  text-decoration: none;
+}
+
+h1 {
+  family-family: 'Century Gothic', sans-serif;
+  font-size: 3vw;
+  color: #538083;
+  text-align: left;
+  margin-left: 7vw;
+  width: 65vw;
+}
+
+h2 {
+  family-family: 'Century Gothic', sans-serif;
+  font-size: 2vw;
+  color: #538083;
+  text-align: left;
+  margin-left: 7vw;
+  width: 65vw;
+}
+
+span img {
+  width: 30vw;
+  height: auto;
+  float: right;
+  margin-top: 19vw;
+  margin-right: 5vw;
+  border-radius: 1vw;
+  border: 1vw solid #89909f;
+}
+
+button {
+  width: 15vw;
+  height: 10vw;
+  border: 1vw solid #538083;
+  margin-left: 7vw;
+  background-color: #89909f;
+  family-family: 'Century Gothic', sans-serif;
+ }
+
+ button a {
+   background-color: #dfd9e2;
+   font-size: 2vw;
+   padding: 1vw;
+   text-decoration: none;
+   color: #89909f;
+ }
+
+button a:hover {
+   color: #dfd9e2;
+   background-color: #538083;
+   text-decoration: none;
+ }
