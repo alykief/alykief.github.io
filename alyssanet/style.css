@@ -115,6 +115,7 @@ h1 {
 
 h2 {
   family-family: 'Century Gothic', sans-serif;
+  font-style: italic; 
   font-size: 2vw;
   color: #538083;
   text-align: left;
