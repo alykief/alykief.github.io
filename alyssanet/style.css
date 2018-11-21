@@ -115,7 +115,7 @@ h1 {
 
 h2 {
   family-family: 'Century Gothic', sans-serif;
-  font-style: italic; 
+  font-style: italic;
   font-size: 2vw;
   color: #538083;
   text-align: left;
@@ -154,4 +154,15 @@ button a:hover {
    color: #dfd9e2;
    background-color: #538083;
    text-decoration: none;
+ }
+
+ .flexDis {
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .flexDis img {
+   width: 25vw;
+   height: 13vw;
+   margin-left: 4vw;
  }
