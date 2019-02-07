@@ -73,6 +73,16 @@ p a:active {
   text-decoration: none;
 }
 
+p img {
+  width: auto;
+  height: 30vw;
+  float: right;
+  position: relative;
+  margin-top: -7vw;
+  border-radius: 1vw;
+  border: 1vw solid #89909f;
+}
+
 footer {
   family-family: 'Century Gothic', sans-serif;
   text-align: center;
@@ -127,7 +137,8 @@ span img {
   width: 30vw;
   height: auto;
   float: right;
-  margin-top: 19vw;
+  margin-left: 2vw;
+  margin-top: 27vw;
   margin-right: 5vw;
   border-radius: 1vw;
   border: 1vw solid #89909f;
