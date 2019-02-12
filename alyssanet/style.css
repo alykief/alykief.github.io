@@ -179,3 +179,16 @@ button a:hover {
    height: 13vw;
    margin-left: 4vw;
  }
+
+ .flexDis1 {
+   display: flex;
+   justify-content: space-between;
+   overflow: scroll;
+   askdf
+ }
+
+ .flexDis1 img {
+   width: 25vw;
+   height: auto;
+   margin-left: 4vw;
+ }
