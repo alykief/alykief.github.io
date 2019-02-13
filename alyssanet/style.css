@@ -1,5 +1,5 @@
 html {
-  background-color: #dfd9e2;
+  background: linear-gradient(to bottom right, #dfd9e2 61%, #89909f 100%);
 }
 
 header img {
@@ -13,6 +13,7 @@ nav {
   text-align: center;
   background-color: #c3acce;
   padding: .5vw;
+  opacity: 0.75;
 }
 
 nav a:link {
@@ -91,6 +92,7 @@ footer {
   margin-top: 5vw;
   margin-bottom: 5vw;
   color: #89909f;
+  opacity: 0.75;
 }
 
 footer a:link {
