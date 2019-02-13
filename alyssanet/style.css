@@ -10,7 +10,7 @@ header img {
 }
 
 nav {
-  family-family: 'Century Gothic', sans-serif;
+  family-family: 'Montserrat', sans-serif;
   text-align: center;
   background-color: #c3acce;
   padding: .5vw;
@@ -45,9 +45,8 @@ div img {
 }
 
 p {
-  font-family: sans-serif;
   font-size: 2vw;
-  family-family: 'Century Gothic', sans-serif;
+  family-family: 'Montserrat', sans-serif;
   color: #538083;
   text-align: left;
   margin-left: 6vw;
@@ -86,7 +85,7 @@ p img {
 }
 
 footer {
-  family-family: 'Century Gothic', sans-serif;
+  family-family: 'Montserrat', sans-serif;
   text-align: center;
   background-color: #c3acce;
   padding: .5vw;
@@ -118,7 +117,7 @@ footer a:active {
 }
 
 h1 {
-  family-family: 'Century Gothic', sans-serif;
+  family-family: 'Montserrat', sans-serif;
   font-size: 3vw;
   color: #538083;
   text-align: left;
@@ -127,7 +126,7 @@ h1 {
 }
 
 h2 {
-  family-family: 'Century Gothic', sans-serif;
+  family-family: 'Montserrat', sans-serif;
   font-style: italic;
   font-size: 2vw;
   color: #538083;
@@ -148,26 +147,27 @@ span img {
 }
 
 button {
+  family-family: 'Montserrat', sans-serif;
   width: 15vw;
   height: 10vw;
   border: 1vw solid #538083;
   margin-left: 7vw;
   background-color: #89909f;
-  family-family: 'Century Gothic', sans-serif;
  }
 
  button a {
-   background-color: #dfd9e2;
-   font-size: 1vw;
-   padding: 1vw;
-   text-decoration: none;
-   color: #89909f;
+  family-family: 'Montserrat', sans-serif;
+  background-color: #dfd9e2;
+  font-size: 1.75vw;
+  padding: 1vw;
+  text-decoration: none;
+  color: #89909f;
  }
 
 button a:hover {
-   color: #dfd9e2;
-   background-color: #538083;
-   text-decoration: none;
+  color: #dfd9e2;
+  background-color: #538083;
+  text-decoration: none;
  }
 
  .flexDis {
@@ -196,7 +196,7 @@ button a:hover {
  }
 
 h5 {
-  family-family: 'Century Gothic', sans-serif;
+  family-family: 'Montserrat', sans-serif;
   font-size: 1.5vw;
   color: #538083;
   text-align: center;
@@ -205,7 +205,7 @@ h5 {
 }
 
 h6 {
-  font-family: 'Century Gothic', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1vw;
   color: #538083;
   text-align: center;
