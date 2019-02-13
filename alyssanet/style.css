@@ -187,7 +187,6 @@ button a:hover {
    display: flex;
    justify-content: space-between;
    overflow: scroll;
-   askdf
  }
 
  .flexDis1 img {
@@ -195,3 +194,20 @@ button a:hover {
    height: auto;
    margin-left: 4vw;
  }
+
+h5 {
+  family-family: 'Century Gothic', sans-serif;
+  font-size: 1.5vw;
+  color: #538083;
+  text-align: center;
+  margin-left: 3vw;
+  margin-bottom: -1vw;
+}
+
+h6 {
+  font-family: 'Century Gothic', sans-serif;
+  font-size: 1vw;
+  color: #538083;
+  text-align: center;
+  margin-left: 3.5vw;
+}
