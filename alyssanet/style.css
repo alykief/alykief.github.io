@@ -1,5 +1,6 @@
 html {
   background: linear-gradient(to bottom right, #dfd9e2 61%, #89909f 100%);
+  min-height: 100%;
 }
 
 header img {
@@ -79,7 +80,7 @@ p img {
   height: 30vw;
   float: right;
   position: relative;
-  margin-top: -7vw;
+  margin-top: 1vw;
   border-radius: 1vw;
   border: 1vw solid #89909f;
 }
